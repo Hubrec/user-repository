@@ -1,0 +1,29 @@
+<app-header [subtitle]="subtitle"></app-header>
+<div class="user-details-wrapper">
+  <div *ngIf="user; else userNotFound" class="user-details">
+    <div>
+      <label>ID:</label>
+      <span>{{ user.id }}</span>
+    </div>
+    <div>
+      <label>Name:</label>
+      <span>{{ user.name }}</span>
+    </div>
+    <div>
+      <label>Occupation:</label>
+      <span>{{ user.occupation }}</span>
+    </div>
+    <div>
+      <label>Email:</label>
+      <span>{{ user.email }}</span>
+    </div>
+    <div>
+      <label>Bio:</label>
+      <p>{{ user.bio }}</p>
+    </div>
+  </div>
+
+  <ng-template #userNotFound>
+    <h2 class="error-message">This user does not appear to exist</h2>
+  </ng-template>
+</div>

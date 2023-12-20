@@ -1,0 +1,28 @@
+.user-details-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+
+  .user-details {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 5px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: medium;
+
+
+    label {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  }
+
+  .error-message {
+    margin: 20px;
+  }
+}

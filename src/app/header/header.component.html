@@ -1,0 +1,13 @@
+<div class="header-wrapper">
+    <button mat-icon-button color="primary" class='first' (click)="goBack()">
+        <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" (click)="redirectHome()">
+        <mat-icon>home</mat-icon>
+    </button>
+    <h1>{{ title + ' / ' + subtitle }}</h1>
+
+    <button mat-icon-button color="accent" class='last' (click)="saveChanges()">
+      <mat-icon>save</mat-icon>
+    </button>
+</div>

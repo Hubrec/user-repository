@@ -1,0 +1,32 @@
+<app-header [subtitle]="subtitle"></app-header>
+<div class="new-user-form">
+  <form [formGroup]="form" class="form-wrapper">
+
+    <mat-form-field class='form-field'>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName='name'>
+    </mat-form-field>
+
+    <mat-form-field class='form-field'>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName='email'>
+    </mat-form-field>
+
+    <mat-form-field class='form-field'>
+      <mat-label>Occupation</mat-label>
+      <mat-select formControlName='occupation'>
+        <mat-option *ngFor="let occupation of OCCUPATIONS" [value]="occupation">{{occupation}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class='form-field'>
+      <mat-label>Bio</mat-label>
+      <textarea matInput formControlName='bio'></textarea>
+    </mat-form-field>
+  </form>
+
+  <button mat-flat-button type='submit' color="accent" [disabled]="!form.valid" (click)="onSubmit()">Add new user</button>
+</div>
+
+
+
